@@ -1,0 +1,186 @@
+@import './element-variables.scss';
+.custom-form-dialog{
+  $borderColor:#dcdfe6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  >.el-dialog{
+    width: 80%;
+    height: 80%;
+    margin: 0!important;
+    display: flex;
+    flex-direction: column;
+    >.el-dialog__body{
+      flex: 1;
+    }
+    .el-dialog__headerbtn{
+      top: 12px;
+    }
+    >.el-dialog__header{
+      padding: 10px;
+      background: $--color-primary;
+      >span{
+        color: #fff;
+      }
+      >.el-dialog__headerbtn>i{
+        color: #fff;
+      }
+      .el-dialog__title{
+        font-size: 14px;
+        line-height: normal;
+      }
+    }
+    .el-dialog__body{
+      padding: 0;
+      max-height: calc(100% - 37px);
+      .main{
+        display: flex;
+        flex: 1;
+      }
+      .footer{
+        text-align: right;
+        padding: 10px;
+        border-top: 1px solid $borderColor;
+      }
+      >.el-container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        >.el-main{
+          padding: 0;
+        }
+        >.el-aside,>.el-main{
+          height: 100%;
+        }
+      }
+    }
+    .el-main{
+      padding: 0;
+      border-right: 1px solid $borderColor;
+      &.empty{
+        background: url('~@/assets/imgs/bg.png') no-repeat center;
+        background-position-y: 40%;
+      }
+    }
+    .el-aside{
+      &:first-of-type{
+        width: 136px!important;
+        border-right: 1px solid $borderColor;
+        overflow: hidden;
+        >.aside-header{
+          padding: 10px;
+          text-align: center;
+          border-bottom: 1px solid $borderColor;
+        }
+        >.components{
+          max-height: 100%;
+          padding: 10px;
+          overflow-y: auto;
+          overflow-x: hidden;
+          .item{
+            position: relative;
+            font-size: 14px;
+            line-height: normal;
+            color: #333;
+            border: 1px solid #f4f6fc;
+            cursor: move;
+            padding: 6px;
+            padding-left: 10px;
+            &:not(:last-of-type){
+              margin-bottom: 10px;
+            }
+            background: #f4f6fc;
+            &:hover{
+              color: $--color-primary;
+              border: 1px dashed $--color-primary;
+            }
+            >svg{
+              margin-right: 6px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .preview{
+    .renderer-item{
+      padding-right: 10px;
+      border-left: 5px solid transparent;
+      position: relative;
+      margin-bottom: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .config-btns {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 5px;
+        z-index: 1002;
+        .iconfont{
+          font-size: 14px;
+        }
+      }
+      &:after{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        display: block;
+        z-index: 1001;
+      }
+      &:hover{
+        background: rgba($--color-primary,.2);
+      }
+      &.active{
+        background: rgba($--color-primary,.45);
+        border-left: 5px solid $--color-primary;
+        .config-btns {
+          display: block;
+        }
+      }
+    }
+    .item {
+      &.ghost {
+        padding: 10px;
+        width: 100%;
+        background: #fff;
+        border: 1px dashed $--color-primary;
+        svg{
+          margin-right: 6px;
+        }
+      }
+    }
+    .renderer-item.ghost{
+      border: 1px dashed $--color-primary;
+      border-left: 5px solid rgba($--color-primary,.2);
+      &::after{
+        background: #fff;
+        z-index: 1003;
+      }
+      &.active{
+        border-left: 5px solid $--color-primary;
+      }
+    }
+  }
+  .el-aside:last-of-type{
+    overflow: hidden;
+  }
+  .components,.el-main,.el-aside:last-of-type .el-tabs__content{
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: hsla(220,4%,58%,.5);
+      border-radius: 4px;
+    }
+  }
+}
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}

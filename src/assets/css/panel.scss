@@ -1,0 +1,57 @@
+.config-panel{
+  height: 100%;
+  $borderColor:#dcdfe6;
+  .el-tabs__nav-wrap::after{
+    height: 1px;
+    background: $borderColor;
+  }
+  .el-tabs__content{
+    padding: 10px;
+    height: calc(100% - 40px);
+    overflow: auto;
+  }
+  .el-tabs__header{
+    margin-bottom: 0;
+  }
+  .el-form-item__label{
+    padding-bottom: 0;
+  }
+  .el-form-item{
+    margin-bottom: 10px;
+  }
+  .line{
+    border-top: 1px solid $borderColor;
+    margin: 10px 0;
+    display: inline-block;
+    width: 100%;
+  }
+  .el-tabs__item{
+    padding: 0;
+  }
+  .rules{
+    .el-checkbox{
+      margin-left: 0;
+    }
+  }
+  .bind-tab{
+    >div:first-of-type{
+      margin-top: 20px;
+    }
+    &~div{
+      margin-top: 20px;
+    }
+  }
+  .static-data{
+    .el-form-item__content{
+      display: flex;
+      align-items: center;
+    }
+    .el-input-group__prepend{
+      padding: 0 10px;
+    }
+    .el-button{
+      padding: 4px;
+      margin-left: 6px;
+    }
+  }
+}

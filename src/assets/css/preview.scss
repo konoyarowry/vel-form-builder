@@ -1,0 +1,24 @@
+.preiview-dialog{
+  >.el-dialog{
+    width: 62%;
+    height: 62%;
+  }
+  .el-dialog__body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .main{
+      flex: 1;
+    }
+  }
+  .custom-form{
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: hsla(220,4%,58%,.5);
+      border-radius: 4px;
+    }
+  }
+}

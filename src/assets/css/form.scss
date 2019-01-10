@@ -1,0 +1,128 @@
+.custom-form{
+  width: 100%;
+  @for $i from 1 through 3 {
+    .cols-#{$i} {
+      .el-form-item {
+        width: percentage(1/$i)
+      }
+    }
+  }
+  .list{
+    .draggable-box{
+      padding-bottom: 150px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .wrapper{
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .renderer-item {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    .el-form-item__content>[class^=el-]{
+      width: 100%;
+    }
+  }
+  .renderer-item{
+    .el-form-item__content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .text-tip{
+      color: #6789ab;
+      white-space: pre-wrap;
+      line-height: normal;
+      margin-top: 5px;
+      order: 1;
+    }
+    .el-form-item__error{
+      position: static;
+    }
+  }
+  .el-tree-node__expand-icon{
+    font-size: 16px
+  }
+  .el-radio-group{
+    line-height: inherit;
+    .el-radio{
+      line-height: inherit;
+    }
+  }
+  .el-tree.is-filterable {
+    overflow: auto;
+  }
+  .tree-wrapper{
+    height: 194px;
+    overflow: auto;
+    .el-tree{
+      display: inline-block;
+      min-width: 100%;
+      overflow: hidden;
+    }
+  }
+  .tree-main-btn{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .custom-transfer-wrapper{
+    .el-transfer{
+      display: flex;
+    }
+    .el-transfer-panel{
+      flex:1
+    }
+    .el-transfer__buttons{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .btns {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  }
+  .el-upload{
+    width: 100%;
+    >.el-upload-dragger{
+      width: 100%;
+    }
+  }
+  .el-form-item.is-error .el-transfer .el-input__inner{
+    border-color:#dcdfe6;
+  }
+  .el-form-item.is-success .el-transfer .el-input__inner{
+    border-color:#dcdfe6;
+  }
+}
+.transfer-dialog{
+  .el-transfer{
+    display: flex;
+  }
+  .el-transfer-panel{
+    flex:1
+  }
+  .el-transfer__buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .btns {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    >div{
+      margin-left: 0!important;
+    }
+  }
+  .el-dialog__body{
+    padding: 0 20px;
+  }
+}
