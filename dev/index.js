@@ -6,7 +6,7 @@ import FormBuilder from '@/components/FormBuilder'
 import FormRenderer from '@/components/FormRenderer'
 import SvgIcon from '../src/icons/index.js'
 
-import '../src/styles/element-variables.scss'
+import './styles/element-variables.scss'
 
 // import './icons'
 // 已经封装好了，直接把.svg放在icons/svg就可以使用了，具体实现 <svg-icon :class-name="className" icon-class="nav"></svg-icon>
