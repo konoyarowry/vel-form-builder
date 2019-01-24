@@ -170,6 +170,7 @@
   .components,.el-main,.el-aside:last-of-type .el-tabs__content{
     &::-webkit-scrollbar {
       width: 8px;
+      height: 8px;
     }
     &::-webkit-scrollbar-thumb {
       background-color: hsla(220,4%,58%,.5);

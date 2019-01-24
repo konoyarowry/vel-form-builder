@@ -1,7 +1,5 @@
 # vel-form-builder
 
-------
-
 基于**Vue**、**ElementUI**、**Vue.Draggable**，并参考了[https://github.com/GavinZhuLei/vue-form-making](https://github.com/GavinZhuLei/vue-form-making)
 
 > * 扩展了Element组件
